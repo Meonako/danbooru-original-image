@@ -20,6 +20,8 @@ due to some images are pretty large. ***This is on the server and not extension.
 
 - type `chrome://extensions` into address bar   
 ![image](https://user-images.githubusercontent.com/76484203/215346257-b1c58492-7711-469c-86c9-9af1e3290d80.png)
+- Turn on `Developer Mode` on the top right of the page  
+![image](https://user-images.githubusercontent.com/76484203/215347987-80987fd7-8c17-4d09-9fde-48c69dbfb7a8.png)
 - Click `Load unpacked` on the top left of the page  
 ![image](https://user-images.githubusercontent.com/76484203/215346319-8a0226b1-acc4-4945-89c2-3942eca3ba01.png)
 - Select the folder that you just extracted and Done!
