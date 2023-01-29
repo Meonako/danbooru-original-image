@@ -9,8 +9,7 @@
     },
     "permissions": [
         "activeTab",
-        "scripting",
-        "downloads"
+        "scripting"
     ],
     "host_permissions": [
         "*://*/*"
