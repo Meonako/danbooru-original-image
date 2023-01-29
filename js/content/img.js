@@ -23,18 +23,19 @@ function main() {
 
     // If `resizeNotice` is found, grab original img url
     // If not, try changing manually
-    if (!resizeNotice) {
-        // Change to original size
-        imageUrl = Fallback(imageElement);
-    } else {
+    if (resizeNotice) {
+        // Get anchor element
         const anchor = resizeNotice.lastElementChild;
 
-        // If not found anchor, fallback to manual
+        // If not found, fallback to manual
         if (!anchor) {
             imageUrl = Fallback(imageElement);
         } else {
             imageUrl = anchor.href;
         }
+    } else {
+        // Change to original size
+        imageUrl = Fallback(imageElement);
     }
 
     // Changing src to original image URL
