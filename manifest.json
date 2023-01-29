@@ -1,6 +1,6 @@
 {
     "name": "Danbooru Auto 'View Original'",
-    "description": "Make viewing original image(s) in Danbooru easier by get rid of 'view original' button",
+    "description": "Make viewing original image(s) in Danbooru easier by get rid of 'view original' button and resize image to original size",
     "version": "1.0.0",
     "manifest_version": 3,
     "background": {
