@@ -18,7 +18,7 @@ due to some images are pretty large. ***This is on the server and not extension.
 
 ### Google Chrome
 
-- type `chrome://extensions/` into address bar   
+- type `chrome://extensions` into address bar   
 ![image](https://user-images.githubusercontent.com/76484203/215346257-b1c58492-7711-469c-86c9-9af1e3290d80.png)
 - Click `Load unpacked` on the top left of the page  
 ![image](https://user-images.githubusercontent.com/76484203/215346319-8a0226b1-acc4-4945-89c2-3942eca3ba01.png)
