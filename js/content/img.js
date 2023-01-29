@@ -6,7 +6,7 @@ function main() {
 
     if (resizeNotice) {
         // Set 'Resized to xx% of original (view original)' to `display: none`
-        // Why? Because it is easier to fix if user found it not working
+        // Why? Because it is easier to fix if user has found bugs
         resizeNotice.style = "display: none;";
     }
 
