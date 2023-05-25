@@ -1,19 +1,21 @@
-chrome.tabs.onUpdated.addListener(( TabId, changeInfo, Tab ) => {
-    // Opera GX is somehow undefined on settings and so on
-    if (typeof Tab.title == 'undefined' || typeof Tab.url == 'undefined') return;
-    
+function tabUpdate(tabId, _, tab) {
+    if (typeof tab.title == "undefined" || typeof tab.url == "undefined")
+        return;
+
     // For Google Chrome
-    if (Tab.url.startsWith('chrome')) return;
+    if (tab.url.startsWith("chrome")) return;
 
-    // Only danbooru is allowed to go thru this line
-    if (!Tab.url.includes('danbooru')) return;
+    // https://danbooru.donmai.us/posts/4606250
+    // Only danbooru with `posts` in path is allowed to go thru this line
+    if (!tab.url.includes("danbooru") && !tab.url.includes("posts")) return;
 
-    // Inject JavaScript when page is done loading
-    if (changeInfo.status != 'complete') return;
+    // Try to inject JS as fast as possible to reduce load time.
 
     // Inject Script
     chrome.scripting.executeScript({
-        target: { tabId: TabId },
-        files: ['js/content/img.js']
+        target: { tabId },
+        files: ["js/content/img.js"],
     });
-})
+}
+
+chrome.tabs.onUpdated.addListener(tabUpdate);
